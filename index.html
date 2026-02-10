@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashy Page</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                270deg,
+                #ff0080,
+                #7928ca,
+                #2afadf,
+                #00ff6a
+            );
+            background-size: 800% 800%;
+            animation: bgMove 8s ease infinite;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: white;
+            text-shadow:
+                0 0 10px #fff,
+                0 0 20px #ff00ff,
+                0 0 40px #00ffff,
+                0 0 80px #ff00ff;
+            animation: pulse 1.5s infinite alternate,
+                       shake 0.15s infinite;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+                text-shadow:
+                    0 0 10px #fff,
+                    0 0 20px #ff00ff,
+                    0 0 40px #00ffff;
+            }
+            to {
+                transform: scale(1.1);
+                text-shadow:
+                    0 0 20px #fff,
+                    0 0 40px #ff00ff,
+                    0 0 80px #00ffff;
+            }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-2px); }
+            100% { transform: translateX(2px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>I hate this course</h1>
+</body>
+</html>
